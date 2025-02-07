@@ -55,7 +55,7 @@ public class PlayerInput : NewSouds
         }
     }
 
-    public void Jump() // ������
+    public void Jump() 
     {
         OnJump?.Invoke();
         PlaySound(0, volume: 0.7f);
@@ -63,10 +63,10 @@ public class PlayerInput : NewSouds
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Coin")) // �������
+        if (other.gameObject.CompareTag("Coin")) 
         {
             coins++;
-            PlaySound(1, volume : 0.32f);
+            PlaySound(0, random: true, volume : 0.32f);
             Destroy(other.gameObject);
         }
     }
