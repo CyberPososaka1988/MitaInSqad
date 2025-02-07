@@ -66,7 +66,7 @@ public class PlayerInput : NewSouds
         if (other.gameObject.CompareTag("Coin")) 
         {
             coins++;
-            PlaySound(0, random: true, volume : 0.32f);
+            PlaySound(0, random: true, volume : 0.9f);
             Destroy(other.gameObject);
         }
     }
